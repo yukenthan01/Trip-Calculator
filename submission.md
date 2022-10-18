@@ -1,0 +1,4 @@
+- This project doesn't need any additional packages. 
+- You can run the test cases as you define from the root directory `vendor/bin/phpunit`.
+- For the Scenario C I had created separate function (calculateC) and a class (DistanceC).
+- The Scenario C didn't completed fully.

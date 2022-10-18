@@ -4,7 +4,7 @@ namespace App\Rates;
 
 use App\Contracts\Distance as DistanceContract;
 
-class Distance implements DistanceContract
+class DistanceC implements DistanceContract
 {
     /**
      * The value of this trip, as an integer (base currency, e.g. pennies).
@@ -29,17 +29,18 @@ class Distance implements DistanceContract
      * @return int
      */
     public function value(): int
-    {   
-        // distance for B 
+    {     
+        // distance for C  
         if($this->value>=0)
         {
-            if($this->value>=50)
+            if($this->value>100)
             {
-                $totalRate = ($this->value-50) * 50 ;
+                $totalRate = ($this->value-100) * 20  + 100;
                 return $totalRate;
             }
             else{
-                return 0;
+                $totalRate = $this->value * 1 ;
+                return $totalRate;
             }
         }
         

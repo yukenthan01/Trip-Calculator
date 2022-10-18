@@ -16,4 +16,5 @@ interface Calculator
      * @return \App\Contracts\Result
      */
     public function calculate(Carbon $start, Carbon $end, int $distance): Result;
+    
 }

@@ -12,4 +12,5 @@ class Rate extends Model
      * @var bool
      */
     protected static $unguarded = true;
+    
 }

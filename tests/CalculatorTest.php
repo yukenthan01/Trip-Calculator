@@ -39,7 +39,7 @@ class CalculatorTest extends TestCase
     public function test_scenario_a_rates_return_correct_results(c $start, c $end, int $value) {
         $calculator = $this->getCalculator(static::SCENARIO_A);
         $result = $calculator->calculate($start, $end, 0);
-
+       
         $this->assertEquals($value, $result->value(), "{$start} to {$end} has a value of {$value}");
 
         $distance = $result->distance();
@@ -84,7 +84,7 @@ class CalculatorTest extends TestCase
         $result = $calculator->calculate($start, $end, $distance);
 
         $this->assertEquals($value, $result->value(), "{$start} to {$end} has a value of {$value}");
-
+        
         $expected = $result->distance();
 
         $this->assertEquals($distanceValue, $expected->value(), "{$distance} units of distance should have a value of {$value}");
@@ -124,10 +124,10 @@ class CalculatorTest extends TestCase
         int $value, int $distanceValue
     ) {
         // TODO: comment out the skip if you're feeling brave.
-        $this->markTestSkipped('Uncomment the skip in Scenario C to attempt it');
+        //$this->markTestSkipped('Uncomment the skip in Scenario C to attempt it');
 
         $calculator = $this->getCalculator(static::SCENARIO_C);
-        $result = $calculator->calculate($start, $end, $distance);
+        $result = $calculator->calculateC($start, $end, $distance);
 
         $this->assertEquals($value, $result->value(), "{$start} to {$end} has a value of {$value}");
 
